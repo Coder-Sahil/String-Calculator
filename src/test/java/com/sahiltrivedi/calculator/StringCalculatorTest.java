@@ -44,7 +44,14 @@ public class StringCalculatorTest {
      * Test of Add method, of class StringCalculator.
      */
     
-    
+    @Test
+    public void emptyStringReturnZero() {
+        
+        int expResult = 0;
+        String numbers = "";
+        int result = strCal.Add(numbers);
+        assertEquals(expResult, result);      
+    }
     
     
    
