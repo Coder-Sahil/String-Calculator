@@ -76,7 +76,14 @@ public class StringCalculatorTest {
         int result = strCal.Add(numbers);
         assertEquals(expResult, result);      
     }
-    
+    @Test
+    public void returnTotalWhenHaveNewLine() {
+                
+        String numbers = "1,2\n3";
+        int expResult = 1 + 2 + 3;
+        int result = strCal.Add(numbers);
+        assertEquals(expResult, result);      
+    }
    
     
 }
