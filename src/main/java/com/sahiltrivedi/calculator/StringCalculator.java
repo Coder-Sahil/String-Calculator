@@ -13,10 +13,19 @@ public class StringCalculator {
     
     public int Add(String numbers)
     {
+        int sum = 0;
         if(numbers == "" || numbers == null)
             return 0;
+        else
+        {
+            String[] numberArray = numbers.split(",");
+            if(numberArray.length == 1)
+            {
+                sum = Integer.parseInt(numberArray[0]);
+            }
+        }
         
-        return -1;
+        return sum;
     }
     
     public static void main(String[] args) {
