@@ -18,7 +18,7 @@ public class StringCalculator {
             return 0;
         else
         {
-            String[] numberArray = numbers.split(",");
+            String[] numberArray = numbers.split("[, \n]");
             if(numberArray.length == 1)
             {
                 sum = Integer.parseInt(numberArray[0]);
