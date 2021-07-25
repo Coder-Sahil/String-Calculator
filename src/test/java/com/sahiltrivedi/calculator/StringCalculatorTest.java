@@ -52,6 +52,14 @@ public class StringCalculatorTest {
         int result = strCal.Add(numbers);
         assertEquals(expResult, result);      
     }
+    @Test
+    public void nullStringReturnZero() {
+        
+        int expResult = 0;
+        String numbers = null;
+        int result = strCal.Add(numbers);
+        assertEquals(expResult, result);      
+    }
     
     
    
