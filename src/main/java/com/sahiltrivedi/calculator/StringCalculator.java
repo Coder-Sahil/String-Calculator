@@ -13,7 +13,7 @@ public class StringCalculator {
     
     public int Add(String numbers)
     {
-        if(numbers == "")
+        if(numbers == "" || numbers == null)
             return 0;
         
         return -1;
