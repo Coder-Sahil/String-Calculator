@@ -68,7 +68,22 @@ public class StringCalculatorTest {
         int result = strCal.Add(numbers);
         assertEquals(expResult, result);      
     }
-    
+        
+    @Test
+    public void invalidSingleStringThrowException(){
+                
+        String numbers = "XYZ";
+        Exception result = null;
+        try
+        {
+            int res = strCal.Add(numbers);
+        }
+        catch(Exception ex)
+        {
+            result = ex;
+        }
+        assertEquals(IllegalArgumentException.class, result);
+    }
     
    
     
