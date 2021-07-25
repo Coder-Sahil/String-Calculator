@@ -84,6 +84,14 @@ public class StringCalculatorTest {
         int result = strCal.Add(numbers);
         assertEquals(expResult, result);      
     }
+    @Test
+    public void identifyDelimeterAndReturnTotal() {
+                
+        String numbers = "//;\n1;2";
+        int expResult = 1 + 2 + 3;
+        int result = strCal.Add(numbers);
+        assertEquals(expResult, result);      
+    }
    
     
 }
