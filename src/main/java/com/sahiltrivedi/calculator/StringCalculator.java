@@ -23,6 +23,14 @@ public class StringCalculator {
             {
                 sum = Integer.parseInt(numberArray[0]);
             }
+            else
+            {
+                for(String numString : numberArray )
+                {
+                    int num = Integer.parseInt(numString);
+                    sum = sum + num;
+                }
+            }
         }
         
         return sum;
