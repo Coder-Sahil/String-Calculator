@@ -60,6 +60,14 @@ public class StringCalculatorTest {
         int result = strCal.Add(numbers);
         assertEquals(expResult, result);      
     }
+    @Test
+    public void singleNumberReturnItself() {
+                
+        String numbers = "5";
+        int expResult = Integer.parseInt(numbers);
+        int result = strCal.Add(numbers);
+        assertEquals(expResult, result);      
+    }
     
     
    
