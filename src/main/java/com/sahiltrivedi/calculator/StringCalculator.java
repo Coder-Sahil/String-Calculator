@@ -27,7 +27,8 @@ public class StringCalculator {
             }
             else if(Pattern.matches("[0-9]", numberArray[0]) == false)
             {
-                String delimeter = numberArray[0].substring(2);
+                String customDelimeter = numberArray[0].substring(2);
+                String delimeter = "[" + customDelimeter + "\n" +"]";
                 String[] tempNumberArray = numbers.split("\n",2);
                 numberArray = tempNumberArray[1].split(delimeter);
                 sum = totalSum(numberArray);
