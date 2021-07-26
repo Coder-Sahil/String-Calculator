@@ -54,7 +54,11 @@ public class StringCalculator {
                         numberArray = tempNumberArray[1].split("\\*\\*\\*");
                     else
                         numberArray = tempNumberArray[1].split(delimeter);                    
-                    sum = totalSum(numberArray);
+                    List<String> numList = new ArrayList<String>();;
+                    for(String num: numberArray)
+                        if(!num.isEmpty() || !num.isBlank())
+                            numList.add(num);
+                    sum = totalSum(numList.toArray(new String[numList.size()]));
                 }
                 else if(Pattern.matches("[0-9]", numberArray[0]) == false)
                 {

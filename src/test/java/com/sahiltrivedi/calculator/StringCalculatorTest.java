@@ -238,4 +238,20 @@ public class StringCalculatorTest {
         }
         assertEquals(expResult, result);  
     }
+    @Test
+    public void handleMultipleUnknownLengthDelimeter(){
+        
+        String numbers = "//[**][%%]\n1**2%%3";
+        int expResult = 6;
+        int result = 0;
+        try
+        {
+            result = strCal.Add(numbers);
+        }
+        catch(Exception ex)
+        {
+            fail("UnHandled Exception Thrown");
+        }
+        assertEquals(expResult, result);  
+    }
 }
