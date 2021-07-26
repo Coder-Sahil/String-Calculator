@@ -100,5 +100,21 @@ public class StringCalculatorTest {
         int result = strCal.Add(numbers);
         assertEquals(expResult, result);      
     }
-    
+    @Test
+    public void negativeNumberThrowException(){
+                
+        String numbers = "//;\n1;-2;-3\n4";
+        String expResult = ("negative not allowed -2,-3");
+        Exception ex = null;
+        try {
+           strCal.Add(numbers);
+        } catch (Exception exp) {
+            
+            ex = exp;
+        }
+        if(ex != null)
+            assertEquals(expResult, ex.getMessage());
+        else
+            fail("No Exception Thrown");
+    }
 }
