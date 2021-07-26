@@ -92,6 +92,13 @@ public class StringCalculatorTest {
         int result = strCal.Add(numbers);
         assertEquals(expResult, result);      
     }
-   
+    @Test
+    public void customDelimeterWithNewLineReturnTotal() {
+                
+        String numbers = "//;\n1;2;3\n4";
+        int expResult = 1 + 2 + 3 + 4;
+        int result = strCal.Add(numbers);
+        assertEquals(expResult, result);      
+    }
     
 }
