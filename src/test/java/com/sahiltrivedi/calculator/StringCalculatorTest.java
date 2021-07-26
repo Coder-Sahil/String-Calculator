@@ -177,7 +177,7 @@ public class StringCalculatorTest {
     @Test
     public void returnNumberOfAddFunctionCallCount(){
         
-        int expResult = 10;
+        int expResult = 11;
         int result = 0;
         try
         {
@@ -225,7 +225,7 @@ public class StringCalculatorTest {
     @Test
     public void handleMultipleCustomLengthDelimeter(){
         
-        String numbers = "“//[*][%]\\n2*2%4”";
+        String numbers = "//[*][%]\n2*2%4";
         int expResult = 8;
         int result = 0;
         try
