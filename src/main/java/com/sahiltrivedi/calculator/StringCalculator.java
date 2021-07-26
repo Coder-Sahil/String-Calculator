@@ -17,7 +17,7 @@ public class StringCalculator {
     public int Add(String numbers) throws Exception
     {
         addCallCount++;
-        int sum = 0;
+        int sum = 0;        
         try
         {
             if(numbers == "" || numbers == null)
@@ -28,6 +28,18 @@ public class StringCalculator {
                 if(numberArray.length == 1)
                 {
                     sum = Integer.parseInt(numberArray[0]);
+                }
+                else if(numberArray[0].contains("//[") && numberArray[0].contains("]"))
+                {
+                    String customDelimeter = numberArray[0].substring(3, numberArray[0].length() - 1);                                       
+                    String delimeter = "[" + "("+ customDelimeter + ")" + " \n" +"]";
+                    String[] tempNumberArray = numbers.split("\n",2);
+                    if(customDelimeter.matches("\\*\\*\\*"))   
+                        numberArray = tempNumberArray[1].split("\\*\\*\\*");
+                    else
+                        numberArray = tempNumberArray[1].split(delimeter);
+                    String[] t =  numberArray;
+                    sum = totalSum(numberArray);
                 }
                 else if(Pattern.matches("[0-9]", numberArray[0]) == false)
                 {

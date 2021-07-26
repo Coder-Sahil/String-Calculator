@@ -209,7 +209,7 @@ public class StringCalculatorTest {
     @Test
     public void handleCustomLengthDelimeter(){
         
-        String numbers = "//[***]\n1;1001;3\n4";
+        String numbers = "//[***]\n1***1001***3***4";
         int expResult = 8;
         int result = 0;
         try
