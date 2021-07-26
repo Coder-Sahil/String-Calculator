@@ -5,6 +5,9 @@
  */
 package com.sahiltrivedi.calculator;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Pattern;
 
 /**
@@ -31,14 +34,26 @@ public class StringCalculator {
                 }
                 else if(numberArray[0].contains("//[") && numberArray[0].contains("]"))
                 {
-                    String customDelimeter = numberArray[0].substring(3, numberArray[0].length() - 1);                                       
-                    String delimeter = "[" + "("+ customDelimeter + ")" + " \n" +"]";
+                    String delimeter = null;
+                    List<String> list = null;
+                    String customDelimeter = numberArray[0].substring(3, numberArray[0].length() - 1);
+                    String[] multiDelimeters = customDelimeter.split("[\\] \\[ ]");
+                    
+                    if(multiDelimeters != null && multiDelimeters.length > 1)
+                    {
+                        delimeter = "[" + "(";
+                        for(String del: multiDelimeters)
+                            if(del != null || del != "")
+                                delimeter += del;
+                        delimeter += ")" + " \n" +"]";                           
+                    }
+                    else
+                        delimeter = "[" + "("+ customDelimeter + ")" + " \n" +"]";
                     String[] tempNumberArray = numbers.split("\n",2);
                     if(customDelimeter.matches("\\*\\*\\*"))   
                         numberArray = tempNumberArray[1].split("\\*\\*\\*");
                     else
-                        numberArray = tempNumberArray[1].split(delimeter);
-                    String[] t =  numberArray;
+                        numberArray = tempNumberArray[1].split(delimeter);                    
                     sum = totalSum(numberArray);
                 }
                 else if(Pattern.matches("[0-9]", numberArray[0]) == false)
