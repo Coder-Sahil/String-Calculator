@@ -177,7 +177,7 @@ public class StringCalculatorTest {
     @Test
     public void returnNumberOfAddFunctionCallCount(){
         
-        int expResult = 11;
+        int expResult = 12;
         int result = 0;
         try
         {
