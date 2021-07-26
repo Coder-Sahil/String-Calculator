@@ -88,6 +88,11 @@ public class StringCalculator {
             return isNegative;
     }
     
+    public int GetCalledCount()
+    {
+        return -1;
+    }
+    
     public static void main(String[] args) {
        
     }

@@ -173,4 +173,20 @@ public class StringCalculatorTest {
         else
             fail("No Exception Thrown");
     }
+    
+    @Test
+    public void returnNumberOfAddFunctionCallCount(){
+        
+        int expResult = 8;
+        int result = 0;
+        try
+        {
+            result = strCal.GetCalledCount();
+        }
+        catch(Exception ex)
+        {
+            fail("UnHandled Exception Thrown");
+        }
+        assertEquals(expResult, result);  
+    }
 }
