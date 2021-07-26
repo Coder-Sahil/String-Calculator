@@ -72,7 +72,8 @@ public class StringCalculator {
                 }
                 else
                 {
-                    sum = sum + num;
+                    if(num < 1001)
+                        sum = sum + num;                   
                 }                
             }
         if(negativeFound)
