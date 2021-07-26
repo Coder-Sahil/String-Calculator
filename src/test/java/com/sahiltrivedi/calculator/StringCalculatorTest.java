@@ -222,4 +222,20 @@ public class StringCalculatorTest {
         }
         assertEquals(expResult, result);  
     }
+    @Test
+    public void handleMultipleCustomLengthDelimeter(){
+        
+        String numbers = "“//[*][%]\\n2*2%4”";
+        int expResult = 8;
+        int result = 0;
+        try
+        {
+            result = strCal.Add(numbers);
+        }
+        catch(Exception ex)
+        {
+            fail("UnHandled Exception Thrown");
+        }
+        assertEquals(expResult, result);  
+    }
 }
