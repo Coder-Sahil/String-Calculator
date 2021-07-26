@@ -206,4 +206,20 @@ public class StringCalculatorTest {
         }
         assertEquals(expResult, result);  
     }
+    @Test
+    public void handleCustomLengthDelimeter(){
+        
+        String numbers = "//[***]\n1;1001;3\n4";
+        int expResult = 8;
+        int result = 0;
+        try
+        {
+            result = strCal.Add(numbers);
+        }
+        catch(Exception ex)
+        {
+            fail("UnHandled Exception Thrown");
+        }
+        assertEquals(expResult, result);  
+    }
 }
