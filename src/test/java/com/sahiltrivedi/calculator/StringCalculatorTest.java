@@ -49,7 +49,15 @@ public class StringCalculatorTest {
         
         int expResult = 0;
         String numbers = "";
-        int result = strCal.Add(numbers);
+        int result = 0;
+        try
+        {
+            result = strCal.Add(numbers);
+        }
+        catch(Exception ex)
+        {
+            fail("UnHandled Exception Thrown");
+        }
         assertEquals(expResult, result);      
     }
     @Test
@@ -57,7 +65,15 @@ public class StringCalculatorTest {
         
         int expResult = 0;
         String numbers = null;
-        int result = strCal.Add(numbers);
+        int result = 0;
+        try
+        {
+            result = strCal.Add(numbers);
+        }
+        catch(Exception ex)
+        {
+            fail("UnHandled Exception Thrown");
+        }
         assertEquals(expResult, result);      
     }
     @Test
@@ -65,7 +81,15 @@ public class StringCalculatorTest {
                 
         String numbers = "5";
         int expResult = Integer.parseInt(numbers);
-        int result = strCal.Add(numbers);
+        int result = 0;
+        try
+        {
+            result = strCal.Add(numbers);
+        }
+        catch(Exception ex)
+        {
+            fail("UnHandled Exception Thrown");
+        }
         assertEquals(expResult, result);      
     }
     @Test
@@ -73,7 +97,15 @@ public class StringCalculatorTest {
                 
         String numbers = "1,2";
         int expResult = 1 + 2;
-        int result = strCal.Add(numbers);
+        int result = 0;
+        try
+        {
+            result = strCal.Add(numbers);
+        }
+        catch(Exception ex)
+        {
+            fail("UnHandled Exception Thrown");
+        }
         assertEquals(expResult, result);      
     }
     @Test
@@ -81,7 +113,15 @@ public class StringCalculatorTest {
                 
         String numbers = "1,2\n3";
         int expResult = 1 + 2 + 3;
-        int result = strCal.Add(numbers);
+        int result = 0;
+        try
+        {
+            result = strCal.Add(numbers);
+        }
+        catch(Exception ex)
+        {
+            fail("UnHandled Exception Thrown");
+        }
         assertEquals(expResult, result);      
     }
     @Test
@@ -89,7 +129,15 @@ public class StringCalculatorTest {
                 
         String numbers = "//;\n1;2";
         int expResult = 1 + 2;
-        int result = strCal.Add(numbers);
+        int result = 0;
+        try
+        {
+            result = strCal.Add(numbers);
+        }
+        catch(Exception ex)
+        {
+            fail("UnHandled Exception Thrown");
+        }
         assertEquals(expResult, result);      
     }
     @Test
@@ -97,7 +145,15 @@ public class StringCalculatorTest {
                 
         String numbers = "//;\n1;2;3\n4";
         int expResult = 1 + 2 + 3 + 4;
-        int result = strCal.Add(numbers);
+        int result = 0;
+        try
+        {
+            result = strCal.Add(numbers);
+        }
+        catch(Exception ex)
+        {
+            fail("UnHandled Exception Thrown");
+        }
         assertEquals(expResult, result);      
     }
     @Test
