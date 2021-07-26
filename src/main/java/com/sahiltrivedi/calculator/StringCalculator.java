@@ -13,8 +13,10 @@ import java.util.regex.Pattern;
  */
 public class StringCalculator {     
     
+    private static int addCallCount = 0;
     public int Add(String numbers) throws Exception
     {
+        addCallCount++;
         int sum = 0;
         try
         {
@@ -90,7 +92,7 @@ public class StringCalculator {
     
     public int GetCalledCount()
     {
-        return -1;
+        return addCallCount;
     }
     
     public static void main(String[] args) {
